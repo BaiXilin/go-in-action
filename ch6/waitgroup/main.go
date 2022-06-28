@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	runtime.GOMAXPROCS(2)
+	fmt.Println("# of cores: ", runtime.NumCPU())
+	runtime.GOMAXPROCS(22)
 
 	var wg sync.WaitGroup
 	wg.Add(2)
